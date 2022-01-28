@@ -1,4 +1,5 @@
 import this
+from bullets import bullet
 
 class tank:
     speed = 5
@@ -29,3 +30,9 @@ class tank:
             this.pos_y += this.speed
         if this.rotation == 270:
             this.pos_x -= this.speed
+    def fireBullet():
+        pass
+
+class enemyTank(tank):
+    def pathfinding():
+        pass
