@@ -50,6 +50,9 @@ def on_key_release(symbol, modifiers): #if a button is released then finish curr
     if symbol == key.A:
         stop = True
 
+def on_mouse_motion(x, y, dx, dy):
+    playerTank.gunDirection = [x, y]
+
 def update(): #call the update function for all game objects for any process that occurs every frame
     global gameObjects
     for i in gameObjects:
