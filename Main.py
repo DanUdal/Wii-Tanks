@@ -3,6 +3,7 @@ import pyglet
 from tanks import tank
 from bullets import bullet
 from levels import gameObjects
+from levels import tanks
 from pyglet.libs.win32.constants import TRUE
 from pyglet.window import key
 
@@ -53,6 +54,9 @@ def update(): #call the update function for all game objects for any process tha
     global gameObjects
     for i in gameObjects:
         i.update()
+    if len(tanks) == 0:
+        #end level if all enemies are destroyed
+        pass
 
 playerTank = tank() #the player's tank
 gameObjects.append(playerTank)

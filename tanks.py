@@ -35,6 +35,9 @@ class tank:
         gameObjects.append(bullet(self.position, self.gunDirection))
     def update(self):
         pass
+    def destroy(self):
+        gameObjects.remove(self)
+        del self
 
 class enemyTank(tank):
     def pathfinding(): #run the A* algorithm to determine the tank's path through the level

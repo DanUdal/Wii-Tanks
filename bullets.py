@@ -35,3 +35,8 @@ class bullet:
                 self.destroy()
     def destroy(self):
         gameObjects.remove(self)
+        del self
+    def collision(self): #check for a collision with a tank or bullet
+        #loop from game objects to see if bullet is intersecting any
+        #destroy both objects if there is a collision
+        pass
